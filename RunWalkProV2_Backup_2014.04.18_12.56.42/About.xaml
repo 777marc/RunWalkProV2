@@ -1,0 +1,77 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="RunWalkProV2.About"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="Run Walk Pro - About Us" Style="{StaticResource PhoneTextNormalStyle}"/>
+        </StackPanel>
+
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Grid Margin="-12,0,-26,0">
+                <Rectangle Fill="White" HorizontalAlignment="Left" Margin="26,18,0,61" Width="424"/>
+                <TextBlock HorizontalAlignment="Left" Margin="35,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="425" Width="407" Foreground="Black">
+						<Run Text="The Run Walk Timer allows you to set intervals for you run/walk workout session. "/>
+						<LineBreak/>
+						<Run/>
+						<LineBreak/>
+						<Run Text="You can listen to music while you run by starting your playlist before you start your workout."/>
+						<LineBreak/>
+						<Run/>
+						<LineBreak/>
+						<Run Text="You can check out your workout data online at www.runwalkpro.com."/>
+						<LineBreak/>
+						<Run/>
+						<LineBreak/>
+						<Run Text="Please consult your doctor prior to starting any exercise regiment.  "/>
+						<LineBreak/>
+						<Run/>
+						<LineBreak/>
+						<Run FontWeight="Bold" Text="Privacy Policy:  "/>
+						<Run Text="Run Walk PRO uses your phone's location for providing data on you workout only.  Your location is never shared."/>
+						<LineBreak/>
+						<Run/>
+						<LineBreak/>
+						<Run/>
+						<LineBreak/>
+						<Run/>
+						<LineBreak/>
+						<Run/>
+						<LineBreak/>
+						<Run/>
+						<LineBreak/>
+						<Run/>
+						<LineBreak/>
+
+                </TextBlock>
+                <Button x:Name="btnRate" Content="Rate This App!" HorizontalAlignment="Left" Margin="20,446,0,0" VerticalAlignment="Top" Background="#FF00020F" Foreground="#FFF5EEEE" Click="btnRate_Click"/>
+
+                <Button x:Name="btnEmail" Content="Email the Developer" HorizontalAlignment="Left" Margin="198,446,0,0" VerticalAlignment="Top" Background="#FF00020F" Foreground="#FFF5EEEE" Click="btnEmail_Click" Width="257"/>
+
+                <HyperlinkButton x:Name="txtWebsite" Content="Get Help Online" HorizontalAlignment="Left" Margin="53,509,0,0" 
+                             VerticalAlignment="Top" Width="361" 
+                             TargetName="_blank" Background="Black" Foreground="White" Height="41"/>
+
+            </Grid>
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

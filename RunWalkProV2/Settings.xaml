@@ -1,0 +1,56 @@
+﻿<phone:PhoneApplicationPage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikInput="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Input" 
+    xmlns:telerikPrimitives="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Primitives" 
+    xmlns:UI="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI"
+    x:Class="RunWalkProV2.Settings" 
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="Run Walk Pro - Settings" Style="{StaticResource PhoneTextNormalStyle}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="1,0,0,0">
+
+
+
+            <telerikInput:RadListPicker x:Name="rlpUnits" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="171" Margin="262,57,0,0" SelectionChanged="rlpUnits_SelectionChanged"/>
+            <CheckBox x:Name="chkAllowLocation" Content="Allow App to Use Location" HorizontalAlignment="Left" Margin="20,359,0,0" VerticalAlignment="Top" Width="368"/>
+
+            <telerikInput:RadListPicker x:Name="rlpStartWith" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="171" Margin="262,165,0,0" SelectionChanged="rlpStartWith_SelectionChanged"/>
+            <telerikInput:RadListPicker x:Name="rlpAlertType" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="171" Margin="262,275,0,0" SelectionChanged="rlpAlertType_SelectionChanged"/>
+            <Button x:Name="btnCalcCalories" Content="Calculate&#xA;Calories" HorizontalAlignment="Left" Margin="20,139,0,0" VerticalAlignment="Top" Width="193" Click="btnCalcCalories_Click"/>
+            <TextBox x:Name="txtCalories" HorizontalAlignment="Left" Height="72" Margin="20,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="193" InputScope="Number" LostFocus="rtxtCalories_LostFocus"/>
+            <TextBlock x:Name="txtCalorieLable" HorizontalAlignment="Left" Margin="41,31,0,0" TextWrapping="Wrap" Text="Calories / Unit" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="262,130,0,0" TextWrapping="Wrap" Text="Start with:" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="263,20,0,0" TextWrapping="Wrap" Text="Unit of Measure:" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="262,242,0,0" TextWrapping="Wrap" Text="Alert Type:" VerticalAlignment="Top"/>
+
+
+            <UI:AdControl ApplicationId="80485c6b-53de-44c3-be04-270b86a1454d" AdUnitId="135024" HorizontalAlignment="Left" Height="80" Margin="-2,507,0,0" VerticalAlignment="Top" Width="480"/>
+            <CheckBox x:Name="chkDiableLockScreen" Content="Disable Lock Screen " HorizontalAlignment="Left" Margin="21,408,0,0" VerticalAlignment="Top" Checked="chkDiableLockScreen_Checked" Unchecked="chkDiableLockScreen_Unchecked"/>
+
+
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>
